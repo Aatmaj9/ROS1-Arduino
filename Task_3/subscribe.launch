@@ -1,0 +1,4 @@
+<launch>
+        <node pkg="arduino_comm" type="subscriberArduino.py" name="sub_node" output="screen">
+        </node>
+</launch>

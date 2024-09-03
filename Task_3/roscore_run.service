@@ -1,0 +1,13 @@
+[Unit]
+Description=ROS Core Run Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 0.5
+ExecStart=/home/jetson/bash_scripts/start_roscore.sh
+ExecStop=/home/jetson/bash_scripts/start_roscore.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

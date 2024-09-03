@@ -1,0 +1,13 @@
+[Unit]
+Description=ros_node_launch
+After=network.target roscore_run.service
+
+[Service]
+Type=simple
+ExecStartPre=/bin/sleep 10
+ExecStart=/bin/bash -c 'source /opt/ros/noetic/setup.bash && source /home/jetson/catin_ws/devel/setup.bash && /opt/ros/noetic/bin/roslaunch /home/jetson/catin_ws/src/arduino_comm/launch/publish.launch'
+ExecStop=/bin/bash -c 'source /opt/ros/noetic/setup.bash && source /home/jetson/catin_ws/devel/setup.bash && /opt/ros/noetic/bin/roslaunch /home/jetson/catin_ws/src/arduino_comm/launch/publish.launch'
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

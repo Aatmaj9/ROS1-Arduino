@@ -1,0 +1,8 @@
+<launch>
+		<node pkg="arduino_comm" type="publishArduino.py" name="pub_node" output="screen">
+		</node>
+        <node pkg="arduino_comm" type="subscriberArduino1.py" name="sub_node1" output="screen">
+		</node>
+        <node pkg="arduino_comm" type="subscriberArduino2.py" name="sub_node2" output="screen">
+		</node>
+</launch>

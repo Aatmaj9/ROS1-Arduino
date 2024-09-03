@@ -1,0 +1,1 @@
+In this task we wish to control thrusters using W A S D keys with the help of Arduino and Jetson.
