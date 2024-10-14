@@ -19,11 +19,11 @@ More clarification regarding the image -
 
 JetPack includes Jetson Linux with bootloader, Linux kernel, Ubuntu desktop environment, and a complete set of libraries for acceleration of GPU computing, multimedia, graphics, and computer vision. It also includes samples, documentation, and developer tools for both host computer and developer kit, and supports higher level SDKs such as DeepStream for streaming video analytics, Isaac for robotics, and Riva for conversational AI. 
 
-
 For Jetson Orin nano we downloaded Jetpack 5.1.1( as we were using ros1 )
 It includes Jetson Linux 35.4.1 BSP with Linux Kernel 5.10, an Ubuntu 20.04 based root file system, a UEFI based bootloader, and OP-TEE as Trusted Execution Environment.
 You can download it from here- 
-https://developer.nvidia.com/embedded/jetpack-sdk-511#collapseJetsonXavierNX
+
+https://developer.nvidia.com/embedded/jetpack-sdk-511
 
 Note : If you want to upgrade to ROS 2 later we have to install Jetpack 6 which includes Jetson linux 36.2 which packs kernel 5.15 and Ubuntu 22.04 based root system.
 
