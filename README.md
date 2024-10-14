@@ -22,10 +22,10 @@ JetPack includes Jetson Linux with bootloader, Linux kernel, Ubuntu desktop envi
 
 For Jetson Orin nano we downloaded Jetpack 5.1.1( as we were using ros1 )
 It includes Jetson Linux 35.4.1 BSP with Linux Kernel 5.10, an Ubuntu 20.04 based root file system, a UEFI based bootloader, and OP-TEE as Trusted Execution Environment.
-
+You can download it from here- 
+https://developer.nvidia.com/embedded/jetpack-sdk-511#collapseJetsonXavierNX
 
 Note : If you want to upgrade to ROS 2 later we have to install Jetpack 6 which includes Jetson linux 36.2 which packs kernel 5.15 and Ubuntu 22.04 based root system.
-
 
 https://developer.nvidia.com/embedded/jetpack-sdk-60dp 
 
@@ -48,7 +48,9 @@ You have to download SSH on your laptop and jetson. Connect the jetson  to power
 
 Open terminal on jetson and install SSH using command
 
-sudo apt-get install openssh-server.
+```
+sudo apt-get install openssh-server
+```
 
 Now we have SSH installed on our jetson. To use it remotely we need to connect jetson with our laptop for that we need a static ip address of our jetson.
 
