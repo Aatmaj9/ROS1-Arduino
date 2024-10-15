@@ -181,15 +181,29 @@ sudo chmod 666 /dev/ttyACM0
 
 This command gives read and write permission to the ACM0 port where the arduino is connected.
 
-Then run -
+Now start roscore on a new terminal- 
+```
+roscore
+```
+On another terminal run -
 
 ```
 rosrun rosserial_python serial_node.py /dev/ttyACM0
 ```
 
-After the above commands run successfully -
+After the above commands run successfully you will get a output like this - 
 
-Run the subscriber node and publisher node on separate terminals.
+```
+[INFO] [1728988013.575030]: ROS Serial Python Node
+[INFO] [1728988013.584133]: Connecting to /dev/ttyACM0 at 57600 baud
+[INFO] [1728988015.691279]: Requesting topics...
+[INFO] [1728988015.716080]: Note: publish buffer size is 280 bytes
+[INFO] [1728988015.718253]: Setup publisher on info_back [std_msgs/Int32]
+[INFO] [1728988015.733503]: Note: subscribe buffer size is 280 bytes
+[INFO] [1728988015.735901]: Setup subscriber on information [std_msgs/Int32]
+ ```
+
+Now run the subscriber node and publisher node on separate terminals.
 
 Here are sample codes for testing - The publisher node publishes numbers automatically ,the arduino doubles it and returns the output to the subscriber node which prints the doubled value.
 
