@@ -167,7 +167,7 @@ You can use Jetson itself to upload code to Arduino just make sure you have inst
 
 </details>
 
-Upload your Arduino code to the Arduino and connect it to Jetson.
+Upload your Arduino code ( You can upload the sample arduino code provided in Task 1 ) to the Arduino and connect it to Jetson.
 
 Determine the port where arduino is connected - 
 ```ls /dev/ttyACM*```
@@ -203,11 +203,11 @@ After the above commands run successfully you will get a output like this -
 [INFO] [1728988015.735901]: Setup subscriber on information [std_msgs/Int32]
  ```
 
-Now run the subscriber node and publisher node on separate terminals.
-
-Here are sample codes for testing - The publisher node publishes numbers automatically ,the arduino doubles it and returns the output to the subscriber node which prints the doubled value.
+You have successfully established connection between Jetson and Arduino. You can do a lot of interesting things with this. Let us look at it in the form of tasks - 
 
 ## Task 1 - Testing
+
+Here are sample codes for testing - The publisher node publishes numbers automatically ,the arduino doubles it and returns the output to the subscriber node which prints the doubled value.
 
 **Publisher Node**
 ```py
@@ -260,7 +260,7 @@ rospy.spin( )
 ```
 
 **Arduino IDE Code**
-```py
+```ino
 #include <ros.h>
 #include <std_msgs/Int32.h>
 
