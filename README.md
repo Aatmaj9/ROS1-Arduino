@@ -182,6 +182,8 @@ rosrun rosserial_arduino make_libraries.py
 ```
 </details>
 
+***
+
 Upload your Arduino code ( You can upload the sample arduino code provided in Task 1 ) to the Arduino and connect it to Jetson.
 
 Determine the port where arduino is connected - 
