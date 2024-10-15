@@ -83,7 +83,20 @@ Follow the same steps as installing ROS Noetic on ubuntu 20.04
 Follow this -
 http://wiki.ros.org/noetic/Installation/Ubuntu
 
-Also make a catkin workspace and catkin package named arduino_comm with rospy roscpp and std_msgs as dependencies
+Now make a catkin workspace and catkin package named arduino_comm with rospy roscpp and std_msgs as dependencies. If you dont remember let us see how to do this -
+
+'''
+source /opt/ros/noetic/setup.bash
+mkdir -p ~/amogh_ws/src
+cd ~/amogh_ws
+catkin_make
+source devel/setup.bash
+cd ~/amogh_ws/src
+catkin_create_pkg arduino_comm std_msgs rospy roscpp
+cd ~/amogh_ws
+catkin_make
+source devel/setup.bash
+```
 
 # Communication between Arduino and Jetson using ROS
 
@@ -115,16 +128,22 @@ Note: The ros_lib library generated on your Jetson and the Arduino environment t
 <details>
 <summary>Using Arduino IDE on Ubuntu 20.04 system </summary>
 
-Install Arduino IDE on your Ubuntu 20.04 . After Installation a <sketchbook> directory will be formed where the Linux Arduino environment saves your sketches. Typically this is a directory called sketchbook or Arduino in your home directory. e.g cd ~/Arduino/libraries
+### Installing Arduino IDE on your Ubuntu 20.04 - 
 
-You have to generate the ros_lib library and save it in the Linux Arduino environment as  the jetson and the Arduino IDE should have the same ros_lib library.
+Download the Linux 64 bits version for Arduino 1.8.18 from here - https://www.arduino.cc/en/software/OldSoftwareReleases
 
-You should have pre-installed ros noetic and rosserial_arduino package on your laptop.
+Follow the steps to install Arduino IDE here - https://docs.arduino.cc/software/ide-v1/tutorials/Linux/
+
+After Installation a  directory will be formed where the Linux Arduino environment saves your sketches. Typically this is a directory called sketchbook or Arduino in your home directory. e.g cd ~/Arduino/libraries
+
+You have to generate the ros_lib library and save it in the Linux Arduino environment.
+
+You should have pre-installed ros noetic and rosserial_arduino package on your Ubuntu 20.04 laptop.
 
 Generate the ros_lib folder -
 
 ```
-cd <sketchbook>/libraries
+cd Arduino/libraries
 rm -rf ros_lib  
 rosrun rosserial_arduino make_libraries.py
 ```
