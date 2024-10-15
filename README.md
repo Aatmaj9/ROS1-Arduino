@@ -163,8 +163,23 @@ Note: This is not recommended as the library through which the code is uploaded 
 <details>
 <summary>Arduino IDE on Jetson</summary>
 
-You can use Jetson itself to upload code to Arduino just make sure you have installed the proper Arduino environment for Jetson.
+### Installing Arduino on Jetson
 
+The steps are similar to that of Ubuntu -
+
+Download the Arm64 version for Arduino 1.8.18 from here - https://www.arduino.cc/en/software/OldSoftwareReleases
+
+Follow the steps to install Arduino IDE here - https://docs.arduino.cc/software/ide-v1/tutorials/Linux/
+
+After Installation a  directory will be formed where the Linux Arduino environment saves your sketches. Typically this is a directory called sketchbook or Arduino in your home directory. e.g cd ~/Arduino/libraries
+
+Generate the ros_lib folder -
+
+```
+cd Arduino/libraries
+rm -rf ros_lib  
+rosrun rosserial_arduino make_libraries.py
+```
 </details>
 
 Upload your Arduino code ( You can upload the sample arduino code provided in Task 1 ) to the Arduino and connect it to Jetson.
