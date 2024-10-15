@@ -85,7 +85,7 @@ http://wiki.ros.org/noetic/Installation/Ubuntu
 
 Now make a catkin workspace and catkin package named arduino_comm with rospy roscpp and std_msgs as dependencies. If you dont remember let us see how to do this -
 
-'''
+```
 source /opt/ros/noetic/setup.bash
 mkdir -p ~/amogh_ws/src
 cd ~/amogh_ws
