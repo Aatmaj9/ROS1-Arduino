@@ -1,9 +1,11 @@
+Here we will explore how to communicate with Arduino using ROS1. While many references here are specific to using a Jetson Nano for communication with Arduino, the methods described are equally valid for users running Ubuntu or other Linux distributions. If you're not using Jetson, you can simply substitute any Jetson-specific instructions with equivalent Ubuntu steps. Essentially, the process remains the same across both platforms.
+
 # Communication between Arduino and Jetson using ROS
 
-We now want to write publisher and subscriber nodes such that -
+We want to write publisher and subscriber nodes such that -
 A ROS publisher node(on Jetson) which will publish messages to a topic to which Arduino will subscribe.
 We need an Arduino IDE code which will interpret these messages, change them and publish them back to another topic.
-We need a ROS subscriber node(on Jetson) which will subscribe to this topic and receive messages back from Arduino.
+We need a ROS subscriber node on your system which will subscribe to this topic and receive messages back from Arduino.
 
 Note: We can setup publisher and subscriber on same node on Jetson which we will do while working with sensors but for learning purposes we will create two separate nodes here,
 
@@ -19,16 +21,16 @@ sudo apt-get install ros-noetic-rosserial
 
 The preceding installation steps created the necessary libraries, now the following will create the ros_lib folder that the Arduino build environment needs to enable Arduino programs to interact with ROS.
 
-You need to upload the Arduino code to Aruduino. You can either do this from Jetson or linux Arduino or from Windows.
+You need to upload the Arduino code to Aruduino. You can either do this from Jetson or Ubuntu or even from Windows.
 
-You have to install Arduino ide on your laptop (Linux or windows) / Jetson - 
+You have to install Arduino ide on either your Ubuntu / Windows system  or Jetson - 
 
 Note: The ros_lib library generated on your Jetson and the Arduino environment through which you are uploading the code should be the same. Otherwise it can cause errors.
 
 <details>
 <summary>Using Arduino IDE on Ubuntu 20.04 system </summary>
 
-### Installing Arduino IDE on your Ubuntu 20.04 - 
+### Installing Arduino IDE on Ubuntu 20.04 - 
 
 Download the Linux 64 bits version for Arduino 1.8.18 from here - https://www.arduino.cc/en/software/OldSoftwareReleases
 
@@ -38,7 +40,7 @@ After Installation a  directory will be formed where the Linux Arduino environme
 
 You have to generate the ros_lib library and save it in the Linux Arduino environment.
 
-You should have pre-installed ros noetic and rosserial_arduino package on your Ubuntu 20.04 laptop.
+You should have pre-installed ros noetic and rosserial_arduino package on your Ubuntu 20.04 .
 
 Generate the ros_lib folder -
 
